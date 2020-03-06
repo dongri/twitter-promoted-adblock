@@ -25,7 +25,6 @@ var block = function(){
       elem = $(this);
     }
   });
-  console.log(elem);
   if (elem != null) {
     elem.parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
   }
