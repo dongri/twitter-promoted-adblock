@@ -1,16 +1,33 @@
 
-var words = ["Promoted", "プロモーション", "推荐", "프로모션"];
+var word = "Promoted";
 
-var block = function(){
-  words.forEach(function(text){
-    var elem = null;
-    $("span:contains('" + text + "')").each(function(){
-        if($(this).text() == text) elem = $(this);
-    });
-    if (elem != null){
-      elem.parent().parent().parent().parent().parent().parent().parent().parent().parent().css("display", "none");
-    }
-  });
+switch (document.documentElement.lang) {
+  case "en":
+    word = "Promoted";
+    break;
+  case "zh":
+    word = "推荐";
+    break;
+  case "ja":
+    word = "プロモーション";
+    break;
+  case "ko":
+    word = "プロモーション";
+    break;
+  default:
+    word = "프로모션";
 }
 
-setInterval(block, 1000);
+var block = function(){
+  var elem = null;
+  $("span:contains('" + word + "')").each(function(){
+    if ($(this).text() == word) {
+      elem = $(this);
+    }
+  });
+  if (elem != null) {
+    elem.parent().parent().parent().parent().parent().parent().parent().parent().parent().css("display", "none");
+  }
+  setTimeout(block, 1000);
+}
+block();
