@@ -1,4 +1,5 @@
-var words = ["Promoted", "プロモーション"];
+
+var words = ["Promoted", "プロモーション", "推荐", "프로모션"];
 
 var block = function(){
   words.forEach(function(text){
@@ -11,4 +12,5 @@ var block = function(){
     }
   });
 }
+
 setInterval(block, 1000);
