@@ -12,10 +12,10 @@ switch (document.documentElement.lang) {
     word = "プロモーション";
     break;
   case "ko":
-    word = "プロモーション";
+    word = "프로모션";
     break;
   default:
-    word = "프로모션";
+    word = "Promoted";
 }
 
 var block = function(){
