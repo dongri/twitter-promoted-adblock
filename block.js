@@ -20,13 +20,14 @@ switch (document.documentElement.lang) {
 
 var block = function(){
   var elem = null;
-  $("span:contains('" + word + "')").each(function(){
-    if ($(this).text() == word) {
+  $("span:contains('" + word + "')", "[data-testid='primaryColumn']").each(function(){
+    if ($(this).text() === word) {
       elem = $(this);
     }
   });
+  console.log(elem);
   if (elem != null) {
-    elem.parent().parent().parent().parent().parent().parent().parent().parent().parent().css("display", "none");
+    elem.parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
   }
   setTimeout(block, 1000);
 }
