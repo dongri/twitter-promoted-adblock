@@ -1,6 +1,6 @@
+var words = ["Promoted", "プロモーション"];
 
 var block = function(){
-  var words = ["Promoted", "プロモーション", "推荐", "프로모션"];
   words.forEach(function(text){
     var elem = null;
     $("span:contains('" + text + "')").each(function(){
