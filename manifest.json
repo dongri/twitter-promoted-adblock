@@ -1,0 +1,23 @@
+{
+  "name": "Twitter Promoted AdBlock",
+  "version": "0.0.1",
+  "description": "Twitter Promoted AdBlock",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://twitter.com/home",
+        "https://www.twitter.com/home"
+      ],
+      "js": [
+        "jquery.js",
+        "block.js"
+      ]
+    }
+  ],
+  "icons": { 
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
