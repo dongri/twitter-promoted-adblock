@@ -19,7 +19,8 @@ switch (document.documentElement.lang) {
 }
 
 var block = function(){
-  $("span:contains('" + word + "')", "[data-testid='primaryColumn']").each(function(){
+  // $("span:contains('" + word + "')", "[data-testid='primaryColumn']").each(function(){
+  $("span:contains('" + word + "')").each(function(){
     console.log($(this).text());
     if ($(this).text() === word) {
       $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
