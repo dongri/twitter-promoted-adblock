@@ -19,15 +19,12 @@ switch (document.documentElement.lang) {
 }
 
 var block = function(){
-  var elem = null;
   $("span:contains('" + word + "')", "[data-testid='primaryColumn']").each(function(){
+    console.log($(this).text());
     if ($(this).text() === word) {
-      elem = $(this);
+      $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
     }
   });
-  if (elem != null) {
-    elem.parent().parent().parent().parent().parent().parent().parent().parent().parent().remove();
-  }
   setTimeout(block, 1000);
 }
 block();
