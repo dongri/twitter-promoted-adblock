@@ -10,7 +10,7 @@
         "https://www.twitter.com/home"
       ],
       "js": [
-        "jquery.js",
+        "jquery.min.js",
         "block.js"
       ]
     }
